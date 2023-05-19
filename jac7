@@ -1,0 +1,7 @@
+function validate_email($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+}
+
+$email = "test@example.com";
+$is_valid = validate_email($email);
+echo $is_valid ? "Valid" : "Invalid";
